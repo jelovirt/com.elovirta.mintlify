@@ -1,0 +1,4 @@
+<plugin id="com.elovirta.mintlify" version="1.0.0">
+  <feature extension="ant.import" file="build.xml"/>
+  <transtype name="mintlify" extends="mdx" desc="Mintlify"/>
+</plugin>

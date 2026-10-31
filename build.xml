@@ -1,0 +1,16 @@
+<project>
+  <target name="dita2mintlify"
+          depends="markdown_mintlify.init,
+                   markdown_mdx.init,
+                   build-init,
+                   preprocess2,
+                   markdown.init,
+                   markdown.topic,
+                   markdown.map"/>
+  <target name="markdown_mintlify.init">
+    <property name="args.xsl" location="${dita.plugin.com.elovirta.mintlify.dir}/xsl/dita2mintlify.xsl"/>
+    <property name="args.markdown.toc.xsl" location="${dita.plugin.com.elovirta.mintlify.dir}/xsl/map2mintlify.xsl"/>
+    <property name="args.markdown.toc.file" value="docs.json"/>
+    <property name="args.rellinks" value="nofamily"/>
+  </target>
+</project>
